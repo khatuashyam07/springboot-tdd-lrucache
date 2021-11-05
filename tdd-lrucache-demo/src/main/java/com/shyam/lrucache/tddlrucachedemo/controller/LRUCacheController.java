@@ -22,7 +22,7 @@ public class LRUCacheController {
 	private LRUCacheService cacheService;
 	
 	@PostMapping("/addtocache")
-	  public ResponseEntity<?> AddToLRUCache(@RequestBody Requestbody request) {
+	  public ResponseEntity<?> addToLRUCache(@RequestBody Requestbody request) {
 	    cacheService.put(request.getKey(), request.getValue());
 	    return ResponseEntity.noContent().build();
 	  }

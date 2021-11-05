@@ -38,7 +38,7 @@ class TddLrucacheDemoApplicationTests {
 		 RestAssured.baseURI = "http://localhost"; // replace as appropriate
 	}
 	@Test
-	public void AddToLRUCacheTest() {
+	public void addToLRUCacheTest() {
 		JSONObject requestBody = new JSONObject();
 		requestBody.put("key", "key1"); 
 		requestBody.put("value", "value1");
