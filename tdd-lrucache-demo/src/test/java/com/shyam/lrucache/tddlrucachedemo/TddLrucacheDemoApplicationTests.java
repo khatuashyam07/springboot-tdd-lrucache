@@ -51,7 +51,7 @@ class TddLrucacheDemoApplicationTests {
                 .then()
                 .extract().response();
 		
-	    Assert.assertEquals(201, response.statusCode());
+	    Assert.assertEquals(204, response.statusCode());
         
 	}
 
@@ -60,9 +60,9 @@ class TddLrucacheDemoApplicationTests {
 		
 		Response response = RestAssured.given()
 				.header("Content-type", "application/json")
-                .param("postId", "2")
+                .pathParam("key", "key1")
                 .when()
-                .get("/cache/getcache")
+                .get("/cache/getcache/keys/{key}")
                 .then()
                 .extract().response();
 
